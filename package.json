@@ -1,6 +1,6 @@
 {
   "name": "web-ifc-three",
-  "version": "0.0.125-web-ifc0043-WIP",
+  "version": "0.0.125-web-ifc0.0.43-WIP-1",
   "author": "IFC.js",
   "license": "MIT",
   "description": "This library is the implementation of [web-ifc](https://github.com/tomvandig/web-ifc) for [THREE.js](https://github.com/mrdoob/three.js/). This is the official IFCLoader of Three.js.",
@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "three-mesh-bvh": "0.5.21",
-    "web-ifc": "github:simquat/web-ifc#0.0.43-WIP"
+    "web-ifc": "https://github.com/simquat/web-ifc/tarball/0.0.43-WIP-1"
   },
   "devDependencies": {
     "@babel/core": "^7.13.8",
