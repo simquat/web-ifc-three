@@ -8,7 +8,7 @@ import {
     IFCRELAGGREGATES, IFCRELASSOCIATESMATERIAL,
     IFCRELCONTAINEDINSPATIALSTRUCTURE,
     IFCRELDEFINESBYPROPERTIES,
-    IFCRELDEFINESBYTYPE, LoaderError, LoaderSettings, RawLineData, Vector
+    IFCRELDEFINESBYTYPE, LoaderSettings, RawLineData, Vector
 } from 'web-ifc';
 import {ParserProgress} from "./components/IFCParser";
 
@@ -163,7 +163,7 @@ export interface WebIfcAPI {
 
     GetLine(modelID: number, expressID: number, flatten?: boolean):  any | Promise<any>;
 
-    GetAndClearErrors(modelID: number): Vector<LoaderError> | Promise<Vector<LoaderError>>;
+    GetAndClearErrors(modelID: number): Vector<any> | Promise<Vector<any>>;
 
     WriteLine(modelID: number, lineObject: any): void | Promise<void>;
 

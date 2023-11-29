@@ -8,7 +8,7 @@ import {
     WorkerAPIs
 } from '../BaseDefinitions';
 
-import { NewIfcModel, FlatMesh, IfcGeometry, LoaderError, LoaderSettings, RawLineData, Vector } from 'web-ifc';
+import { NewIfcModel, FlatMesh, IfcGeometry, LoaderSettings, RawLineData, Vector } from 'web-ifc';
 import { IFCWorkerHandler } from '../IFCWorkerHandler';
 import { Serializer } from '../serializer/Serializer';
 
@@ -52,7 +52,7 @@ export class WebIfcHandler implements WebIfcAPI {
         return this.handler.request(this.API, WorkerActions.GetLine, { modelID, expressID, flatten });
     }
 
-    async GetAndClearErrors(modelID: number): Promise<Vector<LoaderError>> {
+    async GetAndClearErrors(modelID: number): Promise<Vector<any>> {
         this.handler.serializeHandlers[this.handler.requestID] = (vector: SerializedVector) => {
             return this.serializer.reconstructVector(vector);
         }
